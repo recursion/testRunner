@@ -9,7 +9,18 @@ describe('Tests', function() {
       expect(testArray.length).to.equal(5);
     });
   });
-
+  describe("Sinon Spys", function() {
+    var spy = sinon.spy();
+    it("should recieve arguments from function calls", function() {
+      spy(1, 2, 3);
+      expect(spy.calledWith(1, 2, 3));
+    });
+    it("should count the times the spy was called", function() {
+      spy();
+      spy(1, 2, 3);
+      expect(spy.calledTwice);
+    });
+  });
   describe("Sinon stubs", function() {
     var sandbox;
 
