@@ -1,6 +1,6 @@
 var expect = chai.expect;
 
-describe('Test', function() {
+describe('Tests', function() {
 
 
   describe("Basic expectation: ", function() {
